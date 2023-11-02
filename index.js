@@ -31,15 +31,15 @@ const get_weather_data = async (lon = 0, lat = 0, loc = "") => {
   let api_key = "f13566a403e2404fba7145915230211";
 
   if (!lon && !lat) {
-    url = `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${encodeURIComponent(
+    url = `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${encodeURIComponent(
       "london"
     )}&aqi=no`;
   } else if (loc) {
-    url = `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${encodeURIComponent(
+    url = `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${encodeURIComponent(
       loc
     )}&aqi=no`;
   } else {
-    url = `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${lat},${lon}&aqi=no`;
+    url = `https://api.weatherapi.com/v1/current.json?key=${api_key}&q=${lat},${lon}&aqi=no`;
   }
 
   console.log(url);
